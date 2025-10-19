@@ -1,0 +1,6 @@
+[settings]
+idiomatic_version_file_enable_tools = []
+
+[tools]
+node = "22.20.0"
+pnpm = "10.18.3"
