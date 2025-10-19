@@ -1,27 +1,25 @@
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import React from "react";
 
 export const Hero: React.FC = () => {
   return (
-    <section className="relative bg-[#9CAF88] min-h-[600px] flex items-center justify-center px-6">
-      {/* イラストのプレースホルダー */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-64 h-64 bg-white/20 rounded-lg flex items-center justify-center">
-          <div className="text-white/60 text-center">
-            <div className="w-32 h-32 bg-white/30 rounded-lg mb-4 flex items-center justify-center">
-              <span className="text-4xl">👨‍💻</span>
-            </div>
-            <p className="text-sm">Illustration Placeholder</p>
-          </div>
-        </div>
+    <section className="relative min-h-[700px] min-w-[1000px] flex items-center justify-center">
+      {/* 背景イラスト */}
+      <div className="absolute inset-0 rounded-2xl">
+        <Image
+          src="/a-man-sitting.svg"
+          alt="A man sitting with laptop learning"
+          fill
+          objectFit="cover"
+          priority
+        />
       </div>
 
-      {/* コンテンツ */}
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto">
+      {/* テキストコンテンツ */}
+      <div className="relative z-10 text-center text-white">
         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          Track Your Learning Journey with
-          <br />
-          <span className="text-white">Skillupia</span>
+          Track Your Learning Journey with Skillupia
         </h1>
 
         <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed">

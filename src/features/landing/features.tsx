@@ -24,8 +24,8 @@ export const Features: React.FC = () => {
   ];
 
   return (
-    <section id="features" className="py-16 px-6 bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section id="features" className="py-16 px-[10%] bg-white">
+      <div className="w-full max-w-6xl mx-auto">
         <div className="text-left mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
             Key Features
@@ -42,7 +42,7 @@ export const Features: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-gray-50 border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
+                className="bg-white border border-gray-200 rounded-lg p-6 hover:shadow-md transition-shadow"
               >
                 <div className="mb-4">
                   <IconComponent className="w-8 h-8 text-black" />

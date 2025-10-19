@@ -4,7 +4,7 @@ import React from "react";
 
 export const Header: React.FC = () => {
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-white">
+    <header className="flex items-center justify-between px-8 py-4 bg-white border-b border-gray-100 mb-10">
       <Logo />
 
       <nav className="hidden md:flex items-center space-x-8">
@@ -13,12 +13,6 @@ export const Header: React.FC = () => {
           className="text-black hover:text-gray-600 transition-colors"
         >
           Features
-        </a>
-        <a
-          href="#pricing"
-          className="text-black hover:text-gray-600 transition-colors"
-        >
-          Pricing
         </a>
         <a
           href="#support"
