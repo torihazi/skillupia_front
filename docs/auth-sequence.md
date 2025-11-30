@@ -31,10 +31,22 @@ https://authjs.dev/getting-started/installation?framework=Next.js
 
 https://authjs.dev/concepts/oauth
 
-frontend から sigin を通して post する
-post の向き先が route handler
-route handler が受け取って、client_id とか載せて、302 リダイレクトで idp いって終わったらアプリ側に callback
-そこから
+手順
+auth.js の signin("google")
+route handler に post
+post 先で redirect 302
+idp 認証画面
+成功したら callback
+callback してから code 使って GET token endpoint
+token をもらう
+auth.js に帰ってきて、token を session に埋め込んで 最終的に app に帰る
+この最終的な app の画面をどこで設定するか。
+ここが分かれば、ここで token 使って rails の api に投げれば良い。
+signin の{redirectTo: }で成功後のリダイレクト先を設定できる。
+このあと、access_token、refresh_token を使用して、それらを rails に投げる必要がある。
+route handler を経由して投げる必要がある
+
+そのため、useeffect で routehandler に投げる必要がある
 
 ## 認証フロー（OIDC）
 
