@@ -6,7 +6,7 @@ export default function GoogleSignInForm() {
       action={async () => {
         "use server";
         await signIn("google", {
-          redirectTo: "/",
+          redirectTo: "/setup",
         });
       }}
     >
