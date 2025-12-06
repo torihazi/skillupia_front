@@ -14,7 +14,7 @@ export default function Setup() {
       const data = await response.json();
       router.replace("/home");
     } catch (error) {
-      throw new Error("Failed to setup user");
+      router.replace("/signin");
     }
   };
 
